@@ -34,17 +34,17 @@
             100% { box-shadow: 0 0 0 0 rgba(79, 70, 229, 0); }
         }
         
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease-out;
+        .faq-content {
+            display: none;
+            padding: 1rem 1.5rem;
+            background-color: #f9fafb;
+            border-top: 1px solid #e5e7eb;
         }
-        .faq-answer.open {
-            max-height: 200px;
-            transition: max-height 0.3s ease-in;
+        .faq-content.show {
+            display: block;
         }
         .faq-arrow {
-            transition: transform 0.3s ease;
+            transition: transform 0.2s ease;
         }
         .faq-arrow.rotate {
             transform: rotate(180deg);
@@ -65,14 +65,11 @@
     <section class="bg-gradient-to-br from-blue-600 to-blue-700 text-white py-16 px-4">
         <div class="max-w-4xl mx-auto text-center">
             <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-                Turn Every Bottle into Profit—Get Wholesale AMSOIL for Your Store
+                Turn Every Bottle into Profit- Get AMSOIL Wholesale Pricing for Your Business
             </h1>
             <h2 class="text-xl md:text-2xl mb-8 font-light opacity-90">
                 Become an Official AMSOIL Retailer – Fast, Free & Easy
             </h2>
-            <p class="text-lg mb-10 opacity-90 max-w-2xl mx-auto">
-                Sell the #1 synthetic motor oil brand trusted by pros – AMSOIL. Perfect for auto shops, parts stores, and retail locations.
-            </p>
             <button
                 onclick="window.open('https://www.amsoil.com/account-application/retail/?srsltid=AfmBOooflzM6P2LGeaGe2NcFG8BaodPMu2MWwXopI1PTIfYuDFwwo77f&zo=7393004', '_blank')"
                 class="bg-yellow-500 hover:bg-yellow-600 text-black font-bold text-lg px-8 py-4 rounded-lg shadow-lg transform hover:scale-105 transition-all"
@@ -147,10 +144,67 @@
         </div>
     </section>
 
-    <!-- Why AMSOIL is Better -->
+    <!-- Special Launch Bonus - MOVED HERE -->
+    <section class="py-16 px-4 bg-gradient-to-r from-yellow-50 to-orange-50">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 text-gray-900">🎁 Special Launch Bonus</h2>
+            <div class="bg-white p-8 rounded-lg shadow-xl border-2 border-yellow-400">
+                <div class="text-center mb-6">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">
+                        Place a $400+ Order Within Your First 90 Days & Receive:
+                    </h3>
+                </div>
+                <div class="grid md:grid-cols-2 gap-6 mb-8">
+                    <div class="space-y-4">
+                        <h4 class="text-lg font-semibold text-gray-900 mb-3">You'll Get All of These:</h4>
+                        <div class="flex items-center space-x-3">
+                            <span class="text-green-600 text-lg">✓</span>
+                            <span>AMSOIL mouse pad</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <span class="text-green-600 text-lg">✓</span>
+                            <span>9" x 12" window decal</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <span class="text-green-600 text-lg">✓</span>
+                            <span>Listing on the AMSOIL Locator</span>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <h4 class="text-lg font-semibold text-gray-900 mb-3">Plus Your Choice of One:</h4>
+                        <div class="flex items-center space-x-3">
+                            <span class="text-yellow-600 text-lg">⭐</span>
+                            <span>AMSOIL Retail Shelf Kit</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <span class="text-yellow-600 text-lg">⭐</span>
+                            <span>2' x 3' Aluminum Sign</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <span class="text-yellow-600 text-lg">⭐</span>
+                            <span>8' x 3' AMSOIL Banner</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <p class="text-lg text-gray-700 mb-4">
+                        <strong>Total Value: Over $200 in FREE Marketing Materials!</strong>
+                    </p>
+                    <button
+                        onclick="window.open('https://www.amsoil.com/account-application/retail/?srsltid=AfmBOooflzM6P2LGeaGe2NcFG8BaodPMu2MWwXopI1PTIfYuDFwwo77f&zo=7393004', '_blank')"
+                        class="bg-yellow-500 hover:bg-yellow-600 text-black font-bold text-lg px-8 py-4 rounded-lg shadow-lg transform hover:scale-105 transition-all"
+                    >
+                        Apply Now to Claim Your Bonus →
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why AMSOIL Outperforms - UPDATED TITLE -->
     <section class="py-16 px-4 bg-gray-50">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">🛢️ Why AMSOIL is Better Than Other Oils</h2>
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">🛢️ Why AMSOIL Outperforms</h2>
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div class="space-y-6">
                     <div class="flex items-start space-x-4 p-4 bg-white rounded-lg shadow-sm">
@@ -199,7 +253,7 @@
                         </div>
                         <div class="flex justify-between items-center py-3 border-b border-gray-200">
                             <span class="font-medium text-gray-700">Drain Intervals</span>
-                            <span class="text-green-600 font-bold text-lg">25,000 Miles</span>
+                            <span class="text-green-600 font-bold text-lg">Up to 80% Longer</span>
                         </div>
                         <div class="flex justify-between items-center py-3 border-b border-gray-200">
                             <span class="font-medium text-gray-700">Fuel Economy</span>
@@ -258,63 +312,6 @@
         </div>
     </section>
 
-    <!-- Special Launch Bonus -->
-    <section class="py-16 px-4 bg-gradient-to-r from-yellow-50 to-orange-50">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 text-gray-900">🎁 Special Launch Bonus</h2>
-            <div class="bg-white p-8 rounded-lg shadow-xl border-2 border-yellow-400">
-                <div class="text-center mb-6">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">
-                        Place a $400+ Order Within Your First 90 Days & Receive:
-                    </h3>
-                </div>
-                <div class="grid md:grid-cols-2 gap-6 mb-8">
-                    <div class="space-y-4">
-                        <h4 class="text-lg font-semibold text-gray-900 mb-3">You'll Get All of These:</h4>
-                        <div class="flex items-center space-x-3">
-                            <span class="text-green-600 text-lg">✓</span>
-                            <span>AMSOIL mouse pad</span>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <span class="text-green-600 text-lg">✓</span>
-                            <span>9" x 12" window decal</span>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <span class="text-green-600 text-lg">✓</span>
-                            <span>Listing on the AMSOIL Locator</span>
-                        </div>
-                    </div>
-                    <div class="space-y-4">
-                        <h4 class="text-lg font-semibold text-gray-900 mb-3">Plus Your Choice of One:</h4>
-                        <div class="flex items-center space-x-3">
-                            <span class="text-yellow-600 text-lg">⭐</span>
-                            <span>AMSOIL Retail Shelf Kit</span>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <span class="text-yellow-600 text-lg">⭐</span>
-                            <span>2' x 3' Aluminum Sign</span>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <span class="text-yellow-600 text-lg">⭐</span>
-                            <span>8' x 3' AMSOIL Banner</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="text-center">
-                    <p class="text-lg text-gray-700 mb-4">
-                        <strong>Total Value: Over $200 in FREE Marketing Materials!</strong>
-                    </p>
-                    <button
-                        onclick="window.open('https://www.amsoil.com/account-application/retail/?srsltid=AfmBOooflzM6P2LGeaGe2NcFG8BaodPMu2MWwXopI1PTIfYuDFwwo77f&zo=7393004', '_blank')"
-                        class="bg-yellow-500 hover:bg-yellow-600 text-black font-bold text-lg px-8 py-4 rounded-lg shadow-lg transform hover:scale-105 transition-all"
-                    >
-                        Apply Now to Claim Your Bonus →
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Simple Steps -->
     <section class="py-16 px-4 bg-gray-50">
         <div class="max-w-4xl mx-auto">
@@ -353,70 +350,84 @@
         </div>
     </section>
 
-    <!-- FAQ Section with Dropdown -->
+    <!-- FAQ Section with Proper Dropdown -->
     <section class="py-16 px-4">
         <div class="max-w-4xl mx-auto">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">Frequently Asked Questions</h2>
             <div class="space-y-4">
-                <div class="bg-white rounded-lg shadow-lg border border-gray-200">
-                    <button class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 focus:outline-none" onclick="toggleFAQ(1)">
-                        <h3 class="text-lg font-bold text-gray-900">How much does it cost to become an AMSOIL retailer?</h3>
-                        <span class="faq-arrow text-gray-500 text-xl" id="arrow-1">▼</span>
+                
+                <div class="bg-white border border-gray-200 rounded-lg shadow-sm">
+                    <button class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 focus:outline-none focus:bg-gray-50" onclick="toggleFAQ(1)">
+                        <span class="text-lg font-semibold text-gray-900">How much does it cost to become an AMSOIL retailer?</span>
+                        <svg class="w-5 h-5 text-gray-500 faq-arrow" id="arrow-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
                     </button>
-                    <div class="faq-answer px-6 pb-4" id="answer-1">
+                    <div class="faq-content" id="content-1">
                         <p class="text-gray-600">It's completely <strong>FREE</strong> to apply and become an AMSOIL retailer. There are no upfront costs, no minimum inventory requirements, and no monthly fees.</p>
                     </div>
                 </div>
 
-                <div class="bg-white rounded-lg shadow-lg border border-gray-200">
-                    <button class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 focus:outline-none" onclick="toggleFAQ(2)">
-                        <h3 class="text-lg font-bold text-gray-900">What kind of profit margins can I expect?</h3>
-                        <span class="faq-arrow text-gray-500 text-xl" id="arrow-2">▼</span>
+                <div class="bg-white border border-gray-200 rounded-lg shadow-sm">
+                    <button class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 focus:outline-none focus:bg-gray-50" onclick="toggleFAQ(2)">
+                        <span class="text-lg font-semibold text-gray-900">What kind of profit margins can I expect?</span>
+                        <svg class="w-5 h-5 text-gray-500 faq-arrow" id="arrow-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
                     </button>
-                    <div class="faq-answer px-6 pb-4" id="answer-2">
+                    <div class="faq-content" id="content-2">
                         <p class="text-gray-600">AMSOIL retailers typically enjoy <strong>healthy wholesale margins</strong> that allow for competitive retail pricing while maintaining strong profitability. Exact margins vary by product and volume.</p>
                     </div>
                 </div>
 
-                <div class="bg-white rounded-lg shadow-lg border border-gray-200">
-                    <button class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 focus:outline-none" onclick="toggleFAQ(3)">
-                        <h3 class="text-lg font-bold text-gray-900">Do I need to carry inventory?</h3>
-                        <span class="faq-arrow text-gray-500 text-xl" id="arrow-3">▼</span>
+                <div class="bg-white border border-gray-200 rounded-lg shadow-sm">
+                    <button class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 focus:outline-none focus:bg-gray-50" onclick="toggleFAQ(3)">
+                        <span class="text-lg font-semibold text-gray-900">Do I need to carry inventory?</span>
+                        <svg class="w-5 h-5 text-gray-500 faq-arrow" id="arrow-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
                     </button>
-                    <div class="faq-answer px-6 pb-4" id="answer-3">
+                    <div class="faq-content" id="content-3">
                         <p class="text-gray-600"><strong>No minimum inventory</strong> is required. You can start by stocking just the products your customers demand most, or even operate on a special-order basis initially.</p>
                     </div>
                 </div>
 
-                <div class="bg-white rounded-lg shadow-lg border border-gray-200">
-                    <button class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 focus:outline-none" onclick="toggleFAQ(4)">
-                        <h3 class="text-lg font-bold text-gray-900">How long does the application process take?</h3>
-                        <span class="faq-arrow text-gray-500 text-xl" id="arrow-4">▼</span>
+                <div class="bg-white border border-gray-200 rounded-lg shadow-sm">
+                    <button class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 focus:outline-none focus:bg-gray-50" onclick="toggleFAQ(4)">
+                        <span class="text-lg font-semibold text-gray-900">How long does the application process take?</span>
+                        <svg class="w-5 h-5 text-gray-500 faq-arrow" id="arrow-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
                     </button>
-                    <div class="faq-answer px-6 pb-4" id="answer-4">
+                    <div class="faq-content" id="content-4">
                         <p class="text-gray-600">The application typically takes <strong>5-10 minutes</strong> to complete online. Approval usually happens within 1-2 business days, and you can start ordering immediately after approval.</p>
                     </div>
                 </div>
 
-                <div class="bg-white rounded-lg shadow-lg border border-gray-200">
-                    <button class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 focus:outline-none" onclick="toggleFAQ(5)">
-                        <h3 class="text-lg font-bold text-gray-900">What marketing support do you provide?</h3>
-                        <span class="faq-arrow text-gray-500 text-xl" id="arrow-5">▼</span>
+                <div class="bg-white border border-gray-200 rounded-lg shadow-sm">
+                    <button class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 focus:outline-none focus:bg-gray-50" onclick="toggleFAQ(5)">
+                        <span class="text-lg font-semibold text-gray-900">What marketing support do you provide?</span>
+                        <svg class="w-5 h-5 text-gray-500 faq-arrow" id="arrow-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
                     </button>
-                    <div class="faq-answer px-6 pb-4" id="answer-5">
+                    <div class="faq-content" id="content-5">
                         <p class="text-gray-600">AMSOIL provides <strong>free marketing materials</strong> including signage, product literature, training resources, and listing in the official AMSOIL dealer locator to help drive customers to your business.</p>
                     </div>
                 </div>
 
-                <div class="bg-white rounded-lg shadow-lg border border-gray-200">
-                    <button class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 focus:outline-none" onclick="toggleFAQ(6)">
-                        <h3 class="text-lg font-bold text-gray-900">Can I sell AMSOIL online too?</h3>
-                        <span class="faq-arrow text-gray-500 text-xl" id="arrow-6">▼</span>
+                <div class="bg-white border border-gray-200 rounded-lg shadow-sm">
+                    <button class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 focus:outline-none focus:bg-gray-50" onclick="toggleFAQ(6)">
+                        <span class="text-lg font-semibold text-gray-900">Can I sell AMSOIL online too?</span>
+                        <svg class="w-5 h-5 text-gray-500 faq-arrow" id="arrow-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
                     </button>
-                    <div class="faq-answer px-6 pb-4" id="answer-6">
+                    <div class="faq-content" id="content-6">
                         <p class="text-gray-600"><strong>Yes!</strong> As an authorized retailer, you can sell AMSOIL products both in your physical location and through approved online channels, giving you multiple revenue streams.</p>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
@@ -520,32 +531,32 @@
     <!-- JavaScript for FAQ Dropdown -->
     <script>
         function toggleFAQ(num) {
-            const answer = document.getElementById('answer-' + num);
+            const content = document.getElementById('content-' + num);
             const arrow = document.getElementById('arrow-' + num);
             
-            if (answer.classList.contains('open')) {
-                answer.classList.remove('open');
-                arrow.classList.remove('rotate');
-                arrow.textContent = '▼';
-            } else {
-                // Close all other FAQs
-                for (let i = 1; i <= 6; i++) {
-                    const otherAnswer = document.getElementById('answer-' + i);
+            // Close all other FAQs first
+            for (let i = 1; i <= 6; i++) {
+                if (i !== num) {
+                    const otherContent = document.getElementById('content-' + i);
                     const otherArrow = document.getElementById('arrow-' + i);
-                    if (otherAnswer.classList.contains('open')) {
-                        otherAnswer.classList.remove('open');
-                        otherArrow.classList.remove('rotate');
-                        otherArrow.textContent = '▼';
-                    }
+                    otherContent.classList.remove('show');
+                    otherArrow.classList.remove('rotate');
                 }
-                
-                // Open the clicked FAQ
-                answer.classList.add('open');
+            }
+            
+            // Toggle the clicked FAQ
+            if (content.classList.contains('show')) {
+                content.classList.remove('show');
+                arrow.classList.remove('rotate');
+            } else {
+                content.classList.add('show');
                 arrow.classList.add('rotate');
-                arrow.textContent = '▲';
             }
         }
     </script>
+
+</body>
+</html>
 
 </body>
 </html>

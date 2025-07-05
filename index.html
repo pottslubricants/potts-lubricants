@@ -4,19 +4,7 @@
     <title>Potts Lubricants - AMSOIL Retail Partner Application</title>
     <meta name="description" content="Become an official AMSOIL retailer with Potts Lubricants. Fast, free application process for auto shops, parts stores, and retail locations.">
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1043955647469010');
-fbq('track', 'PageView');
-</script>
+    <script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init', '1043955647469010');fbq('track', 'PageView');</script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
@@ -42,7 +30,7 @@ fbq('track', 'PageView');
                 Sell the #1 synthetic motor oil brand trusted by pros – AMSOIL. Perfect for auto shops, parts stores, and retail locations.
             </p>
             <button
-                onclick="trackAndApply('hero-section')"
+                onclick="fbq('track', 'Lead'); window.open('https://www.amsoil.com/account-application/retail/?zo=7393004', '_blank')"
                 class="bg-yellow-500 hover:bg-yellow-600 text-black font-bold text-lg px-8 py-4 rounded-lg shadow-lg transform hover:scale-105 transition-all"
             >
                 Apply Now to Become a Retail Partner →
@@ -158,7 +146,6 @@ fbq('track', 'PageView');
                         Place a $400+ Order Within Your First 90 Days & Receive:
                     </h3>
                 </div>
-
                 <div class="grid md:grid-cols-2 gap-6 mb-8">
                     <div class="space-y-4">
                         <h4 class="text-lg font-semibold text-gray-900 mb-3">You'll Get All of These:</h4>
@@ -175,7 +162,6 @@ fbq('track', 'PageView');
                             <span>Listing on the AMSOIL Locator</span>
                         </div>
                     </div>
-
                     <div class="space-y-4">
                         <h4 class="text-lg font-semibold text-gray-900 mb-3">Plus Your Choice of One:</h4>
                         <div class="flex items-center space-x-3">
@@ -192,13 +178,12 @@ fbq('track', 'PageView');
                         </div>
                     </div>
                 </div>
-
                 <div class="text-center">
                     <p class="text-lg text-gray-700 mb-4">
                         <strong>Total Value: Over $200 in FREE Marketing Materials!</strong>
                     </p>
                     <button
-                        onclick="trackAndApply('bonus-section')"
+                        onclick="fbq('track', 'Lead'); window.open('https://www.amsoil.com/account-application/retail/?zo=7393004', '_blank')"
                         class="bg-yellow-500 hover:bg-yellow-600 text-black font-bold text-lg px-8 py-4 rounded-lg shadow-lg transform hover:scale-105 transition-all"
                     >
                         Apply Now to Claim Your Bonus →
@@ -233,4 +218,43 @@ fbq('track', 'PageView');
                     <div class="bg-green-600 text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mx-auto mb-4">
                         3
                     </div>
-                    <h3 class="text-xl font-bold mb-3">Star
+                    <h3 class="text-xl font-bold mb-3">Start Selling</h3>
+                    <p class="text-gray-600">Get approved and begin offering AMSOIL products.</p>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <div class="flex items-center justify-center space-x-2 text-lg text-gray-700">
+                    <span>⏰</span>
+                    <span>Takes just 5 minutes. No cost to apply.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="py-20 px-4 bg-gradient-to-br from-blue-600 to-blue-700 text-white">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">Ready to Grow Your Business?</h2>
+            <p class="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
+                Don't miss the opportunity to stock the best synthetic lubricants in the industry.
+            </p>
+            <button
+                onclick="fbq('track', 'Lead'); window.open('https://www.amsoil.com/account-application/retail/?zo=7393004', '_blank')"
+                class="bg-yellow-500 hover:bg-yellow-600 text-black font-bold text-xl px-12 py-6 rounded-lg shadow-lg transform hover:scale-105 transition-all mb-8"
+            >
+                Apply Now – Start Selling AMSOIL →
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <p class="text-gray-400">© 2024 Potts Lubricants - AMSOIL Independent Jobber. All rights reserved.</p>
+            <p class="text-sm text-gray-500 mt-2">
+                This page is operated by Potts Lubricants, an independent AMSOIL Jobber.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

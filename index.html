@@ -33,6 +33,22 @@
             70% { box-shadow: 0 0 0 10px rgba(79, 70, 229, 0); }
             100% { box-shadow: 0 0 0 0 rgba(79, 70, 229, 0); }
         }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .faq-answer.open {
+            max-height: 200px;
+            transition: max-height 0.3s ease-in;
+        }
+        .faq-arrow {
+            transition: transform 0.3s ease;
+        }
+        .faq-arrow.rotate {
+            transform: rotate(180deg);
+        }
     </style>
 </head>
 <body>
@@ -337,34 +353,69 @@
         </div>
     </section>
 
-    <!-- FAQ Section -->
+    <!-- FAQ Section with Dropdown -->
     <section class="py-16 px-4">
         <div class="max-w-4xl mx-auto">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">❓ Frequently Asked Questions</h2>
-            <div class="space-y-6">
-                <div class="bg-white p-6 rounded-lg shadow-lg border-l-4 border-blue-500">
-                    <h3 class="text-xl font-bold mb-3 text-gray-900">💰 How much does it cost to become an AMSOIL retailer?</h3>
-                    <p class="text-gray-600">It's completely <strong>FREE</strong> to apply and become an AMSOIL retailer. There are no upfront costs, no minimum inventory requirements, and no monthly fees.</p>
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">Frequently Asked Questions</h2>
+            <div class="space-y-4">
+                <div class="bg-white rounded-lg shadow-lg border border-gray-200">
+                    <button class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 focus:outline-none" onclick="toggleFAQ(1)">
+                        <h3 class="text-lg font-bold text-gray-900">How much does it cost to become an AMSOIL retailer?</h3>
+                        <span class="faq-arrow text-gray-500 text-xl" id="arrow-1">▼</span>
+                    </button>
+                    <div class="faq-answer px-6 pb-4" id="answer-1">
+                        <p class="text-gray-600">It's completely <strong>FREE</strong> to apply and become an AMSOIL retailer. There are no upfront costs, no minimum inventory requirements, and no monthly fees.</p>
+                    </div>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg border-l-4 border-green-500">
-                    <h3 class="text-xl font-bold mb-3 text-gray-900">📈 What kind of profit margins can I expect?</h3>
-                    <p class="text-gray-600">AMSOIL retailers typically enjoy <strong>healthy wholesale margins</strong> that allow for competitive retail pricing while maintaining strong profitability. Exact margins vary by product and volume.</p>
+
+                <div class="bg-white rounded-lg shadow-lg border border-gray-200">
+                    <button class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 focus:outline-none" onclick="toggleFAQ(2)">
+                        <h3 class="text-lg font-bold text-gray-900">What kind of profit margins can I expect?</h3>
+                        <span class="faq-arrow text-gray-500 text-xl" id="arrow-2">▼</span>
+                    </button>
+                    <div class="faq-answer px-6 pb-4" id="answer-2">
+                        <p class="text-gray-600">AMSOIL retailers typically enjoy <strong>healthy wholesale margins</strong> that allow for competitive retail pricing while maintaining strong profitability. Exact margins vary by product and volume.</p>
+                    </div>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg border-l-4 border-yellow-500">
-                    <h3 class="text-xl font-bold mb-3 text-gray-900">📦 Do I need to carry inventory?</h3>
-                    <p class="text-gray-600"><strong>No minimum inventory</strong> is required. You can start by stocking just the products your customers demand most, or even operate on a special-order basis initially.</p>
+
+                <div class="bg-white rounded-lg shadow-lg border border-gray-200">
+                    <button class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 focus:outline-none" onclick="toggleFAQ(3)">
+                        <h3 class="text-lg font-bold text-gray-900">Do I need to carry inventory?</h3>
+                        <span class="faq-arrow text-gray-500 text-xl" id="arrow-3">▼</span>
+                    </button>
+                    <div class="faq-answer px-6 pb-4" id="answer-3">
+                        <p class="text-gray-600"><strong>No minimum inventory</strong> is required. You can start by stocking just the products your customers demand most, or even operate on a special-order basis initially.</p>
+                    </div>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg border-l-4 border-purple-500">
-                    <h3 class="text-xl font-bold mb-3 text-gray-900">⏱️ How long does the application process take?</h3>
-                    <p class="text-gray-600">The application typically takes <strong>5-10 minutes</strong> to complete online. Approval usually happens within 1-2 business days, and you can start ordering immediately after approval.</p>
+
+                <div class="bg-white rounded-lg shadow-lg border border-gray-200">
+                    <button class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 focus:outline-none" onclick="toggleFAQ(4)">
+                        <h3 class="text-lg font-bold text-gray-900">How long does the application process take?</h3>
+                        <span class="faq-arrow text-gray-500 text-xl" id="arrow-4">▼</span>
+                    </button>
+                    <div class="faq-answer px-6 pb-4" id="answer-4">
+                        <p class="text-gray-600">The application typically takes <strong>5-10 minutes</strong> to complete online. Approval usually happens within 1-2 business days, and you can start ordering immediately after approval.</p>
+                    </div>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg border-l-4 border-red-500">
-                    <h3 class="text-xl font-bold mb-3 text-gray-900">🎯 What marketing support do you provide?</h3>
-                    <p class="text-gray-600">AMSOIL provides <strong>free marketing materials</strong> including signage, product literature, training resources, and listing in the official AMSOIL dealer locator to help drive customers to your business.</p>
+
+                <div class="bg-white rounded-lg shadow-lg border border-gray-200">
+                    <button class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 focus:outline-none" onclick="toggleFAQ(5)">
+                        <h3 class="text-lg font-bold text-gray-900">What marketing support do you provide?</h3>
+                        <span class="faq-arrow text-gray-500 text-xl" id="arrow-5">▼</span>
+                    </button>
+                    <div class="faq-answer px-6 pb-4" id="answer-5">
+                        <p class="text-gray-600">AMSOIL provides <strong>free marketing materials</strong> including signage, product literature, training resources, and listing in the official AMSOIL dealer locator to help drive customers to your business.</p>
+                    </div>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg border-l-4 border-indigo-500">
-                    <h3 class="text-xl font-bold mb-3 text-gray-900">🌐 Can I sell AMSOIL online too?</h3>
-                    <p class="text-gray-600"><strong>Yes!</strong> As an authorized retailer, you can sell AMSOIL products both in your physical location and through approved online channels, giving you multiple revenue streams.</p>
+
+                <div class="bg-white rounded-lg shadow-lg border border-gray-200">
+                    <button class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 focus:outline-none" onclick="toggleFAQ(6)">
+                        <h3 class="text-lg font-bold text-gray-900">Can I sell AMSOIL online too?</h3>
+                        <span class="faq-arrow text-gray-500 text-xl" id="arrow-6">▼</span>
+                    </button>
+                    <div class="faq-answer px-6 pb-4" id="answer-6">
+                        <p class="text-gray-600"><strong>Yes!</strong> As an authorized retailer, you can sell AMSOIL products both in your physical location and through approved online channels, giving you multiple revenue streams.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -465,6 +516,36 @@
     <div class="demo-chat" onclick="alert('💬 This is where your live chat will appear! Visitors can ask questions instantly about becoming an AMSOIL retailer.')">
         💬
     </div>
+
+    <!-- JavaScript for FAQ Dropdown -->
+    <script>
+        function toggleFAQ(num) {
+            const answer = document.getElementById('answer-' + num);
+            const arrow = document.getElementById('arrow-' + num);
+            
+            if (answer.classList.contains('open')) {
+                answer.classList.remove('open');
+                arrow.classList.remove('rotate');
+                arrow.textContent = '▼';
+            } else {
+                // Close all other FAQs
+                for (let i = 1; i <= 6; i++) {
+                    const otherAnswer = document.getElementById('answer-' + i);
+                    const otherArrow = document.getElementById('arrow-' + i);
+                    if (otherAnswer.classList.contains('open')) {
+                        otherAnswer.classList.remove('open');
+                        otherArrow.classList.remove('rotate');
+                        otherArrow.textContent = '▼';
+                    }
+                }
+                
+                // Open the clicked FAQ
+                answer.classList.add('open');
+                arrow.classList.add('rotate');
+                arrow.textContent = '▲';
+            }
+        }
+    </script>
 
 </body>
 </html>
